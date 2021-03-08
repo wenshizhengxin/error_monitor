@@ -1,0 +1,17 @@
+{
+  "name": "wenshi/error_monitor",
+  "description": "代码错误监控",
+  "type": "library",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "songyangphp,wsw",
+      "email": "475511896@qq.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "wenshi\\error_monitor\\": "src/"
+    }
+  }
+}
