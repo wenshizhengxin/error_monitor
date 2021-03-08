@@ -6,10 +6,10 @@
  * Time: 10:41
  */
 
-namespace wenshi\error_monitor\driver;
+namespace wenshizhengxin\error_monitor\driver;
 
 
-use wenshi\error_monitor\i\IErrorMonitor;
+use wenshizhengxin\error_monitor\i\IErrorMonitor;
 
 class NetLog implements IErrorMonitor
 {
