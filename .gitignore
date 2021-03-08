@@ -7,3 +7,5 @@ test
 config.json
 /epii-server.ini
 db.conf.php
+test.php
+test1.php

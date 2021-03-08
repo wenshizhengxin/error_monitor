@@ -10,7 +10,7 @@ use wenshizhengxin\error_monitor\i\IErrorMonitor;
 
 class LocalFile implements IErrorMonitor{
 
-    public function write($lineNo, $content)
+    public function write($errno , $err_str , $err_file, $err_line, $err_context)
     {
         // TODO: Implement write() method.
     }

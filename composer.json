@@ -9,6 +9,9 @@
       "email": "475511896@qq.com"
     }
   ],
+  "require": {
+    "epii/log" : ">=0.0.1"
+  },
   "autoload": {
     "psr-4": {
       "wenshizhengxin\\error_monitor\\": "src/"

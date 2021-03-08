@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'wenshizhengxin\\error_monitor\\' => array($baseDir . '/src'),
+    'epii\\log\\' => array($vendorDir . '/epii/log/src'),
 );

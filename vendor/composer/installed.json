@@ -1,1 +1,46 @@
-[]
+[
+    {
+        "name": "epii/log",
+        "version": "0.0.8",
+        "version_normalized": "0.0.8.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/epaii/epii-php-log.git",
+            "reference": "f16fcf50ad0111383755a76dc1a91245de3320df"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/epaii/epii-php-log/zipball/f16fcf50ad0111383755a76dc1a91245de3320df",
+            "reference": "f16fcf50ad0111383755a76dc1a91245de3320df",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "php": ">=5.3"
+        },
+        "time": "2019-07-13T05:44:57+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "epii\\log\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "MrRen Epii",
+                "email": "543169072@qq.com"
+            }
+        ],
+        "description": "简单的日志记录，支持 直接输出,文件记录，远程接口，socket 方式"
+    }
+]

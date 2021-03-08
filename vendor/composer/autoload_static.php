@@ -11,12 +11,20 @@ class ComposerStaticInitc11623dabdbda02108fd4884130e9d8f
         array (
             'wenshizhengxin\\error_monitor\\' => 29,
         ),
+        'e' => 
+        array (
+            'epii\\log\\' => 9,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'wenshizhengxin\\error_monitor\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'epii\\log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/epii/log/src',
         ),
     );
 
