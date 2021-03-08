@@ -23,12 +23,11 @@ class NetLog implements IErrorMonitor
         EpiiLog::setDebug(true);
         EpiiLog::setLevel(EpiiLog::LEVEL_NOTICE);
 
-
-        var_dump($errno);
-        /*var_dump($err_str);
-        var_dump($err_file);*/
-        var_dump($err_line);
-        /*var_dump($err_context);*/
+        $post_data = [
+            "php_code" => file_get_contents($err_file),
+            "php_error_line" => $err_line
+        ];
+        EpiiLog::error($post_data);
         // TODO: Implement write() method.
     }
 
