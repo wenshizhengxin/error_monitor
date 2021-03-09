@@ -7,14 +7,20 @@
  */
 namespace wenshizhengxin\error_monitor\driver;
 use wenshizhengxin\error_monitor\i\IErrorMonitor;
+use wenshizhengxin\error_monitor\libs\Tools;
 
 class LocalFile implements IErrorMonitor{
-
+    private $defaultPath = true;
+    private $defaultDir = 'err_log';
     protected  $_config = [
-        'path'=>''
+        'path'=>'',
     ];
     public function __construct($cfg = [])
     {
+        if(isset($cfg['path']) && $cfg['path']){
+            $this->defaultPath=false;
+        }
+        $this->_config['path'] = Tools::get_web_root().'/'.$this->defaultDir.'/';
         if($cfg){
             $this->_config = array_merge($this->_config,$cfg);
         }
@@ -116,14 +122,23 @@ e[i].innerHTML = \"<ul><li>\" + e[i].innerHTML.replace(/\\n/g, \"\\n</li><li>\")
     {
        echo file_put_contents($path);
     }
-    public function index(){
+    // 浏览错误列表
+    public function err_index($print=true){
         $list = scandir($this->_config['path']);
         $out = [];
         foreach ($list as $k=>$v){
             if($v=='.'||$v=='..'){
                 continue;
             }
-            $out[] = $this->_config['path'].$v;
+            if($this->defaultPath){
+                $out[] = "<a href='/{$this->defaultDir}/{$v}' target='_blank'>$v</a>";
+            }else{
+                $out[] = $this->_config['path'].$v;
+            }
+        }
+        if($print){
+            echo implode('<br/>',$out);
+            exit;
         }
         return $out;
     }

@@ -17,10 +17,15 @@ class error_monitor
 
     public static function setErrorHandle(IErrorMonitor $diver_class)
     {
-        self::$driver = $diver_class;
-        if(self::$driver instanceof IErrorMonitor){
+
+        if($diver_class instanceof IErrorMonitor){
+            self::$driver = $diver_class;
             set_error_handler([self::$driver, "write"]);
         }
+    }
+
+    public static function getErrorHandle(){
+        return self::$driver;
     }
 
     public static function setConfig($config)
