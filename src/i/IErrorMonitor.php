@@ -8,5 +8,5 @@
 namespace wenshizhengxin\error_monitor\i;
 interface IErrorMonitor{
     public function write($errno , $err_str , $err_file, $err_line, $err_context);
-    public function read();
+    public function read($pathOrId);
 }

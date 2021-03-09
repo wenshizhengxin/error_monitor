@@ -10,7 +10,8 @@
     }
   ],
   "require": {
-    "epii/log" : ">=0.0.1"
+    "epii/log" : ">=0.0.1",
+    "scrivo/highlight.php":"v9.18.1.6"
   },
   "autoload": {
     "psr-4": {

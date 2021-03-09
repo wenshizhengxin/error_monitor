@@ -6,6 +6,10 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitc11623dabdbda02108fd4884130e9d8f
 {
+    public static $files = array (
+        'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'w' => 
         array (
@@ -28,11 +32,31 @@ class ComposerStaticInitc11623dabdbda02108fd4884130e9d8f
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'H' => 
+        array (
+            'Highlight\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/scrivo/highlight.php',
+            ),
+            'HighlightUtilities\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/scrivo/highlight.php',
+            ),
+        ),
+    );
+
+    public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitc11623dabdbda02108fd4884130e9d8f::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitc11623dabdbda02108fd4884130e9d8f::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitc11623dabdbda02108fd4884130e9d8f::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitc11623dabdbda02108fd4884130e9d8f::$classMap;
 
         }, null, ClassLoader::class);
     }
