@@ -25,13 +25,14 @@ class NetLog implements IErrorMonitor
 
         $post_data = [
             "php_code" => file_get_contents($err_file),
-            "php_error_line" => $err_line
+            "php_error_line" => $err_line,
+            "php_error_str" => $err_str
         ];
+
         EpiiLog::error($post_data);
-        // TODO: Implement write() method.
     }
 
-    public function read()
+    public function read($pathOrId)
     {
         // TODO: Implement read() method.
     }
