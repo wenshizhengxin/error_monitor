@@ -44,7 +44,7 @@ class LocalFile implements IErrorMonitor{
         return false;
     }
 
-    public function write($errno , $err_str , $err_file, $err_line, $err_context=null)
+    public function write($errno , $err_str , $err_file, $err_line, $err_context = null)
     {
 
         $code = file_get_contents($err_file);

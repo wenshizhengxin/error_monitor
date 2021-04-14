@@ -17,7 +17,7 @@ use wenshizhengxin\error_monitor\i\IErrorMonitor;
 class NetLog implements IErrorMonitor
 {
 
-    public function write($errno , $err_str , $err_file, $err_line, $err_context)
+    public function write($errno , $err_str , $err_file, $err_line, $err_context = null)
     {
         EpiiLog::setDriver((new ApiDriver(error_monitor::$config['project_id'], error_monitor::$config['key'] ,'http://api.log.wszx.cc/')));
         EpiiLog::setDebug(true);
